@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #090d16;
+  color: #f8fafc;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+code, pre, textarea.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Glassmorphism card utilities */
+.glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 1rem;
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.25);
+}
+
+/* Auth inputs */
+.auth-input {
+  @apply w-full px-4 py-3 rounded-xl
+    bg-slate-900/60 border border-slate-700/70
+    text-white placeholder-slate-400
+    focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition;
+}
+
+/* Custom futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 2px solid #090d16;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
